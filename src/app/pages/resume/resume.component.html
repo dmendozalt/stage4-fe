@@ -1,0 +1,29 @@
+<div class="container">
+    <mat-card class="form-card">
+        <mat-card-title>Personal information</mat-card-title>
+        <mat-card-content class="form-card__container">
+            <h4>Name: {{personalInfo.name}}</h4>
+            <h4>Lastname: {{personalInfo.lastName}}</h4>
+            <h4>Age: {{personalInfo.age}}</h4>
+            <h4>Email: {{personalInfo.email}}</h4>
+            <h4>Phone: {{personalInfo.phone}}</h4>
+        </mat-card-content>
+        <mat-card-actions class="form-card__actions-container">
+            <span class="form-card__spacer"></span>
+            <button mat-raised-button color="accent" class="form-card__button" (click)="goTo('personal-info')">Edit</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="form-card">
+        <mat-card-title>Residential information</mat-card-title>
+        <mat-card-content class="form-card__container">
+            <h4>Address: {{residentialInfo.address}}</h4>
+            <h4>Neighborhood: {{residentialInfo.neighborhood}}</h4>
+            <h4>Department: {{residentialInfo.department}}</h4>
+            <h4>City: {{residentialInfo.city}}</h4>
+        </mat-card-content>
+        <mat-card-actions class="form-card__actions-container">
+            <span class="form-card__spacer"></span>
+            <button mat-raised-button color="accent" class="form-card__button" (click)="goTo('residential-info')">Edit</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,35 @@
+<mat-card class="form-card">
+    <mat-card-title>Residential information</mat-card-title>
+    <mat-card-content class="form-card__container">
+        <form [formGroup]="residentialInfoForm">
+            <mat-form-field class="form-card__item">
+                <mat-label>Address</mat-label>
+                <input matInput type="text" placeholder="Address" formControlName="address" />
+            </mat-form-field>
+            <mat-form-field class="form-card__item">
+                <mat-label>Neighborhood</mat-label>
+                <input matInput type="text" placeholder="Neighborhood" formControlName="neighborhood" />
+            </mat-form-field>
+            <mat-form-field class="form-card__item">
+                <mat-label>Department</mat-label>
+                <mat-select formControlName="department">
+                    <mat-option [value]="'Atlantico'">Atlantico</mat-option>
+                    <mat-option [value]="'Antioquia'">Antioquia</mat-option>
+                    <mat-option [value]="'Bolivar'">Bolivar</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-card__item">
+                <mat-label>City</mat-label>
+                <mat-select formControlName="city">
+                    <mat-option [value]="'Barranquilla'">Barranquilla</mat-option>
+                    <mat-option [value]="'Medellin'">Medellin</mat-option>
+                    <mat-option [value]="'Cartagena'">Cartagena</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions class="form-card__actions-container">
+        <span class="form-card__spacer"></span>
+        <button mat-raised-button color="primary" class="form-card__button" (click)="saveResidentialInfo()">Continue</button>
+    </mat-card-actions>
+</mat-card>
